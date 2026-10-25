@@ -4,6 +4,7 @@ on:
   schedule:
     # 18:15 IST on weekdays (12:45 UTC). GitHub schedule timing is best-effort.
     - cron: '45 12 * * 1-5'
+  workflow_dispatch:
 
 permissions:
   contents: write
