@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "config": {
+    "starting_capital": 1000000.0,
+    "max_positions": 15,
+    "max_position_pct": 0.1,
+    "max_sector_pct": 0.25,
+    "cost_bps_per_side": 15.0,
+    "slippage_bps_per_side": 5.0,
+    "atr_stop_mult": 3.0,
+    "cooldown_days": 14
+  },
+  "cash": 1000000.0,
+  "positions": {},
+  "pending_orders": [
+    {
+      "id": "2026-10-23:ICICIBANK:BUY",
+      "symbol": "ICICIBANK",
+      "side": "BUY",
+      "signal_date": "2026-10-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 1394.199951171875,
+      "atr": 27.107142857142858
+    },
+    {
+      "id": "2026-10-23:BHARTIARTL:BUY",
+      "symbol": "BHARTIARTL",
+      "side": "BUY",
+      "signal_date": "2026-10-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 90.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Telecommunication",
+      "reference_close": 1892.0999755859375,
+      "atr": 48.26429966517857
+    },
+    {
+      "id": "2026-10-23:INFY:BUY",
+      "symbol": "INFY",
+      "side": "BUY",
+      "signal_date": "2026-10-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 88.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Information Technology",
+      "reference_close": 1153.800048828125,
+      "atr": 43.10357666015625
+    },
+    {
+      "id": "2026-10-23:TCS:BUY",
+      "symbol": "TCS",
+      "side": "BUY",
+      "signal_date": "2026-10-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 88.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Information Technology",
+      "reference_close": 2530.0,
+      "atr": 83.42884986560755
+    },
+    {
+      "id": "2026-10-23:WIPRO:BUY",
+      "symbol": "WIPRO",
+      "side": "BUY",
+      "signal_date": "2026-10-23",
+      "status": "pending_next_open",
+      "signal": "BUY",
+      "signal_score": 76.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Information Technology",
+      "reference_close": 189.83999633789062,
+      "atr": 5.582858494349888
+    }
+  ],
+  "trades": [],
+  "cooldowns": {},
+  "equity_history": [
+    {
+      "date": "2026-10-23",
+      "cash": 1000000.0,
+      "invested": 0.0,
+      "equity": 1000000.0,
+      "drawdown_pct": 0.0
+    }
+  ],
+  "processed_signal_dates": [
+    "2026-10-23"
+  ],
+  "created_at": "2026-10-25T19:07:20.190465+00:00",
+  "last_updated": "2026-10-25T19:07:20.190584+00:00"
+}
