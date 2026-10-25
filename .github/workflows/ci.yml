@@ -1,0 +1,29 @@
+name: CI
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['data/**', 'app/snapshot.json', 'app/charts.json', 'app/charts/**', 'app/backtest.json']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11', cache: pip }
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: Engine unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Snapshot schema check (bundled demo)
+        run: python tests/validate_snapshot.py app/snapshot.json
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: JavaScript syntax check
+        run: for f in app/js/*.js app/sw.js; do node --check "$f"; echo "OK: $f"; done
+      - name: Browser smoke test
+        run: |
+          pip install playwright && python -m playwright install --with-deps chromium
+          python tests/smoke_ui.py

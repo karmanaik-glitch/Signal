@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Signal — Indian equity research terminal</title>
+<meta name="description" content="Rules-based, end-of-day Indian equity research terminal with an automated paper-traded model portfolio. Not investment advice.">
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<!-- Inline theme/density restore prevents flash-of-wrong-theme -->
+<script>try{var _t=JSON.parse(localStorage.getItem('strata:theme'));if(_t)document.documentElement.dataset.theme=_t;var _d=JSON.parse(localStorage.getItem('strata:density'));if(_d)document.documentElement.dataset.density=_d}catch(e){}</script>
+</head>
+<body>
+<!-- SVG symbol definitions (inline, no external request) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-signals" viewBox="0 0 24 24"><path d="M4 5h16l-6 7v6l-4 2v-8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+  <symbol id="i-watchlist" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6L3.2 9.4l6.1-.8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+  <symbol id="i-rulebot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 8V4M9 13h.01M15 13h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m7-7-7 7 7 7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star-off" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6L3.2 9.4l6.1-.8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star-on" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6L3.2 9.4l6.1-.8z" stroke="currentColor" stroke-width="1.8" fill="currentColor" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="m15 15 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11 1.5 1.5M19 5l-1.5 1.5M7.5 16.5 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-grip" viewBox="0 0 24 24"><circle cx="9" cy="7" r="1.2" fill="currentColor"/><circle cx="9" cy="12" r="1.2" fill="currentColor"/><circle cx="9" cy="17" r="1.2" fill="currentColor"/><circle cx="15" cy="7" r="1.2" fill="currentColor"/><circle cx="15" cy="12" r="1.2" fill="currentColor"/><circle cx="15" cy="17" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-export" viewBox="0 0 24 24"><path d="M4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2M12 3v12m-4-4 4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-import" viewBox="0 0 24 24"><path d="M4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2M12 15V3m4 8-4 4-4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div id="app">
+  <!-- Top bar -->
+  <header id="topbar" role="banner">
+    <a href="#/home" class="logo" aria-label="Signal">
+      <img src="icons/Signal_Wordmark_Only.svg" class="logo-img logo-dark" alt="Signal">
+      <img src="icons/Signal_Wordmark_Only_Light.svg" class="logo-img logo-light" alt="Signal">
+      <span class="logo-sub hide-m">Signal over noise</span>
+    </a>
+    <!-- Command bar (desktop); becomes palette trigger on mobile -->
+    <div class="cmd-bar hide-m">
+      <button class="cmd-input" id="palBtn" aria-label="Open command palette (Ctrl K or /)">
+        <svg width="14" height="14"><use href="#i-search"/></svg>
+        <span class="cmd-input-placeholder">Search symbol, company or command…</span>
+        <kbd class="cmd-kbd">Ctrl K</kbd>
+      </button>
+    </div>
+    <div class="topbar-right">
+      <span id="freshChip" role="status">loading…</span>
+      <button class="icon-btn hide-d" id="palBtnMobile" aria-label="Search (/)">
+        <svg width="16" height="16"><use href="#i-search"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle light / dark theme">
+        <svg width="16" height="16"><use href="#i-theme"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Persistent EOD Ticker Tape -->
+  <aside id="tape" role="region" aria-label="End of day market tape">
+    <div id="tapeTrack" class="tape-track"></div>
+  </aside>
+
+  <!-- Left rail navigation (desktop) -->
+  <nav id="rail" aria-label="Primary navigation"></nav>
+
+  <!-- Main content -->
+  <main id="main" tabindex="-1" aria-label="Main content"></main>
+
+  <!-- Status footer (desktop) -->
+  <footer id="footer" aria-label="Data status">
+    <span id="footerDate">—</span>
+    <span class="dot" id="footerUniverse"></span>
+    <span class="dot" id="footerRuleset"></span>
+    <span class="dot" id="footerRegime"></span>
+    <span class="paper-badge">PAPER ONLY · NO REAL ORDERS</span>
+  </footer>
+</div>
+
+<!-- Mobile bottom tabs -->
+<nav id="tabs" aria-label="Primary navigation mobile"></nav>
+
+<!-- Command palette dialog -->
+<dialog id="pal" aria-label="Command palette">
+  <input id="palIn" type="search" class="pal-input" placeholder="Symbol, company or command…" autocomplete="off" spellcheck="false" aria-label="Search symbols and commands" aria-autocomplete="list" aria-controls="palList">
+  <ul id="palList" class="pal-list" role="listbox" aria-label="Search results"></ul>
+</dialog>
+
+<!-- Toast notifications -->
+<div id="toast" class="toast" hidden role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Install App on phone notification banner (Inactive / Commented out) -->
+<!--
+<aside id="installBanner" class="install-banner" hidden role="alert" aria-label="Install App on Phone">
+  <div class="install-banner-inner">
+    <div class="install-banner-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="3"></rect>
+        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+      </svg>
+    </div>
+    <div class="install-banner-text">
+      <strong class="install-banner-title">Install Signal on your phone</strong>
+      <span class="install-banner-sub">Add to Home Screen for fast, full-screen EOD research &amp; offline access.</span>
+    </div>
+    <div class="install-banner-actions">
+      <button class="btn btn-primary btn-sm" id="installBtn">Install App</button>
+      <button class="btn btn-ghost btn-sm" id="dismissInstallBtn" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+</aside>
+-->
+
+<noscript><p style="padding:20px;font-family:sans-serif">Signal requires JavaScript.</p></noscript>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

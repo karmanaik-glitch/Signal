@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-labelledby="title desc">
+  <title id="title">Signal wordmark</title>
+  <desc id="desc">The word Signal, with only the dot above the lowercase i in teal.</desc>
+  <g font-family="IBM Plex Sans, Inter, Arial, sans-serif">
+    <text x="4" y="99" font-size="104" font-weight="600" letter-spacing="-1.2" fill="#101418">Sıgnal</text>
+    <circle cx="80.00" cy="30.00" r="7.50" fill="#009F85"/>
+  </g>
+</svg>

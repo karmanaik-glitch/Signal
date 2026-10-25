@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+pipeline.log
+data/universe_source.csv
+.vercel/
+node_modules/

@@ -1,0 +1,163 @@
+name: STRATA daily market pipeline
+
+on:
+  schedule:
+    # 18:15 IST on weekdays (12:45 UTC). GitHub schedule timing is best-effort.
+    - cron: '45 12 * * 1-5'
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: strata-daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Fetch, validate and publish EOD snapshot
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install pipeline dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Clear stale run diagnostics
+        run: rm -f data/run_report.json pipeline.log
+
+      - name: Validate universe configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -s data/universe.csv ]]; then
+            echo '::error::data/universe.csv is empty or missing. Add a current, permitted symbol universe before automated runs can publish live data.'
+            exit 1
+          fi
+          python - <<'PY'
+          import pandas as pd
+          p = pd.read_csv('data/universe.csv')
+          if p.empty or not any(str(c).strip().lower() == 'symbol' for c in p.columns):
+              raise SystemExit('data/universe.csv must contain a non-empty symbol column.')
+          print(f'Universe configured: {len(p)} rows')
+          PY
+
+      - name: Run EOD pipeline with diagnostic log
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        shell: bash
+        run: |
+          set -o pipefail
+          python -u engine/run_pipeline.py --universe data/universe.csv --minimum-coverage 0.90 2>&1 | tee pipeline.log
+
+      - name: Validate generated outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('app/snapshot.json')
+          if not p.exists():
+              raise SystemExit('Pipeline did not generate app/snapshot.json')
+          d = json.loads(p.read_text())
+          if d.get('data_mode') != 'LIVE_PIPELINE':
+              raise SystemExit('Refusing to publish: snapshot is not marked LIVE_PIPELINE')
+          if d.get('schema_version') != 3:
+              raise SystemExit('Unexpected snapshot schema version')
+          cov = d.get('coverage', {})
+          if cov.get('price_coverage_pct', 0) < 90:
+              raise SystemExit('Price coverage below 90%; refusing to publish')
+          eq = d.get('bot', {}).get('equity_history', [])
+          if eq and (eq[-1].get('equity') or 0) <= 0:
+              raise SystemExit('Model equity is not positive; refusing to publish')
+          if not d.get('signals') or not d.get('exchange_date'):
+              raise SystemExit('Refusing to publish: snapshot is missing signals or exchange date')
+          if d.get('status') not in ('OK', 'PARTIAL'):
+              raise SystemExit(f"Refusing to publish unexpected snapshot status: {d.get('status')}")
+          allowed = {'STRONG BUY', 'BUY', 'HOLD', 'SELL', 'STRONG SELL', 'DATA BLOCKED'}
+          unknown = sorted({str(row.get('signal')) for row in d['signals']} - allowed)
+          if unknown:
+              raise SystemExit(f'Unknown signal labels; refusing to publish: {unknown}')
+          print(f"Validated snapshot: {d['exchange_date']} \u00b7 {len(d['signals'])} signals \u00b7 {d['status']}")
+          PY
+          # Full schema validation via the test script (WP-2)
+          python tests/validate_snapshot.py app/snapshot.json
+
+      - name: Commit successful snapshot and history
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest_snapshot.json data/bot_state.json data/run_report.json data/fundamentals_cache.json data/fundamentals.csv data/prices_latest.csv data/signals_latest.csv data/benchmark.json app/snapshot.json app/charts app/backtest.json data/history
+          if git diff --cached --quiet; then
+            echo 'No generated data changes to commit.'
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            git commit -m 'chore(data): refresh STRATA EOD snapshot'
+            git pull --rebase --autostash origin main
+            git push
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Add run summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## STRATA daily pipeline'
+            echo
+            echo '- Schedule: weekdays at 18:15 IST (best-effort)'
+            echo '- Hosting: Vercel redeploys automatically from the bot commit; the last good deployment stays live if the pipeline fails.'
+            if [[ -f data/run_report.json ]]; then
+              echo
+              echo '### Pipeline report'
+              python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/run_report.json').read_text())
+          for k in ('status','exchange_date','expected','price_histories','signal_rows','ruleset_version','started_at','finished_at','fundamentals_errors'):
+              if k in d: print(f'- **{k.replace("_", " ").title()}:** {d[k]}')
+          PY
+            else
+              echo '- No fresh run report was produced. The previously published snapshot was not intentionally replaced.'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: strata-pipeline-diagnostics-${{ github.run_number }}
+          path: |
+            pipeline.log
+            data/run_report.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+  notify-failure:
+    name: Alert on failure
+    needs: refresh
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open or update a failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'STRATA daily pipeline failed';
+            const body = `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data } = await github.rest.issues.listForRepo({ ...context.repo, state: 'open', labels: 'pipeline-failure' });
+            if (data.length) await github.rest.issues.createComment({ ...context.repo, issue_number: data[0].number, body });
+            else await github.rest.issues.create({ ...context.repo, title, body, labels: ['pipeline-failure'] });
