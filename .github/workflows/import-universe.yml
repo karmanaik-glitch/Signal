@@ -1,0 +1,84 @@
+name: Import Nifty 500 universe
+
+# Manual workflow. Upload the Nifty 500 constituents CSV you downloaded from NSE
+# to the repo (default path below), then run this from the Actions tab.
+# It builds data/universe.csv with engine/import_universe.py and commits it.
+on:
+  workflow_dispatch:
+    inputs:
+      source_path:
+        description: 'Path of the downloaded constituents CSV inside the repo'
+        required: true
+        default: 'data/source/nifty500_constituents.csv'
+      run_pipeline:
+        description: 'Run the daily pipeline afterwards'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # commit data/universe.csv
+  actions: write    # start the daily pipeline
+
+concurrency:
+  group: strata-universe-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    name: Build data/universe.csv
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SRC: ${{ inputs.source_path }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install pandas
+        run: python -m pip install --upgrade pip pandas
+
+      - name: Check the source file exists
+        run: |
+          if [ ! -f "$SRC" ]; then
+            echo "::error::$SRC not found. Commit the NSE Nifty 500 CSV to that path first."
+            exit 1
+          fi
+
+      - name: Build universe.csv
+        run: python engine/import_universe.py "$SRC"
+
+      - name: Check universe size
+        run: |
+          python - <<'EOF'
+          import pandas as pd
+          n = len(pd.read_csv('data/universe.csv'))
+          print(f'{n} symbols in data/universe.csv')
+          if n < 400:
+              raise SystemExit(f'Only {n} symbols - this is not a full Nifty 500 list.')
+          EOF
+
+      - name: Commit universe.csv
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/universe.csv
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "universe.csv is already up to date."
+          else
+            git commit -m "Update universe from Nifty 500 constituents"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Start the daily pipeline
+        if: inputs.run_pipeline
+        run: gh workflow run daily-update.yml --ref "${{ github.ref_name }}"
