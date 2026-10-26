@@ -22,12 +22,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 1384.300048828125,
+      "last_price": 1381.5,
       "peak_price": 1394.199951171875,
       "atr": 25.771432059151785,
-      "market_value": 98285.30346679688,
-      "unrealised_pnl": -900.8694594726562,
-      "weight_pct": 9.84
+      "market_value": 98086.5,
+      "unrealised_pnl": -1099.6729262695312,
+      "weight_pct": 9.8
     },
     "BHARTIARTL": {
       "symbol": "BHARTIARTL",
@@ -39,11 +39,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Telecommunication",
-      "last_price": 1879.300048828125,
+      "last_price": 1882.5,
       "peak_price": 1886.0,
       "atr": 46.550013950892854,
-      "market_value": 97723.6025390625,
-      "unrealised_pnl": -544.5414609375,
+      "market_value": 97890.0,
+      "unrealised_pnl": -378.144,
       "weight_pct": 9.78
     },
     "INFY": {
@@ -56,12 +56,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 1117.0999755859375,
-      "peak_price": 1117.0999755859375,
+      "last_price": 1135.300048828125,
+      "peak_price": 1135.300048828125,
       "atr": 43.42500523158482,
-      "market_value": 99421.89782714844,
-      "unrealised_pnl": -11.572172851562499,
-      "weight_pct": 9.95
+      "market_value": 101041.70434570312,
+      "unrealised_pnl": 1608.234345703125,
+      "weight_pct": 10.09
     },
     "TCS": {
       "symbol": "TCS",
@@ -73,12 +73,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 2498.699951171875,
-      "peak_price": 2500.0,
+      "last_price": 2520.199951171875,
+      "peak_price": 2520.199951171875,
       "atr": 80.67948255251041,
-      "market_value": 97449.29809570312,
-      "unrealised_pnl": -245.701904296875,
-      "weight_pct": 9.76
+      "market_value": 98287.79809570312,
+      "unrealised_pnl": 592.798095703125,
+      "weight_pct": 9.82
     },
     "WIPRO": {
       "symbol": "WIPRO",
@@ -90,12 +90,12 @@
       "entry_signal": "BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 187.41000366210938,
-      "peak_price": 187.41000366210938,
+      "last_price": 187.4600067138672,
+      "peak_price": 187.4600067138672,
       "atr": 5.552858625139509,
-      "market_value": 53411.85104370117,
-      "unrealised_pnl": 424.33667221069334,
-      "weight_pct": 5.35
+      "market_value": 53426.10191345215,
+      "unrealised_pnl": 438.5875419616699,
+      "weight_pct": 5.34
     }
   },
   "pending_orders": [
@@ -203,9 +203,9 @@
     {
       "date": "2026-10-26",
       "cash": 552429.7,
-      "invested": 446291.95,
-      "equity": 998721.65,
-      "drawdown_pct": -0.128
+      "invested": 448732.1,
+      "equity": 1001161.8,
+      "drawdown_pct": 0.0
     }
   ],
   "processed_signal_dates": [
@@ -213,5 +213,5 @@
     "2026-10-26"
   ],
   "created_at": "2026-10-25T19:07:20.190465+00:00",
-  "last_updated": "2026-10-26T03:48:50.372047+00:00"
+  "last_updated": "2026-10-26T04:13:39.570849+00:00"
 }
