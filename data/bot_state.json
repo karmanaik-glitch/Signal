@@ -22,12 +22,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 1394.199951171875,
+      "last_price": 1386.9000244140625,
       "peak_price": 1394.199951171875,
-      "atr": 25.771432059151785,
-      "market_value": 98988.19653320312,
-      "unrealised_pnl": -197.97639306640625,
-      "weight_pct": 9.85
+      "atr": 27.392865862165177,
+      "market_value": 98469.90173339844,
+      "unrealised_pnl": -716.2711928710937,
+      "weight_pct": 9.77
     },
     "BHARTIARTL": {
       "symbol": "BHARTIARTL",
@@ -39,12 +39,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Telecommunication",
-      "last_price": 1892.0999755859375,
-      "peak_price": 1892.0999755859375,
-      "atr": 46.550013950892854,
-      "market_value": 98389.19873046875,
-      "unrealised_pnl": 121.05473046875,
-      "weight_pct": 9.79
+      "last_price": 1978.800048828125,
+      "peak_price": 1978.800048828125,
+      "atr": 50.642874581473215,
+      "market_value": 102897.6025390625,
+      "unrealised_pnl": 4629.4585390625,
+      "weight_pct": 10.21
     },
     "INFY": {
       "symbol": "INFY",
@@ -56,12 +56,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 1153.800048828125,
-      "peak_price": 1153.800048828125,
-      "atr": 43.42500523158482,
-      "market_value": 102688.20434570312,
-      "unrealised_pnl": 3254.734345703125,
-      "weight_pct": 10.21
+      "last_price": 1163.0,
+      "peak_price": 1163.0,
+      "atr": 45.67857142857143,
+      "market_value": 103507.0,
+      "unrealised_pnl": 4073.53,
+      "weight_pct": 10.27
     },
     "TCS": {
       "symbol": "TCS",
@@ -73,12 +73,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 2530.0,
+      "last_price": 2496.89990234375,
       "peak_price": 2530.0,
-      "atr": 80.67948255251041,
-      "market_value": 98670.0,
-      "unrealised_pnl": 975.0,
-      "weight_pct": 9.82
+      "atr": 84.76311124385812,
+      "market_value": 97379.09619140625,
+      "unrealised_pnl": -315.90380859375,
+      "weight_pct": 9.66
     },
     "WIPRO": {
       "symbol": "WIPRO",
@@ -90,12 +90,12 @@
       "entry_signal": "BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 189.83999633789062,
+      "last_price": 187.0,
       "peak_price": 189.83999633789062,
-      "atr": 5.552858625139509,
-      "market_value": 54104.39895629883,
-      "unrealised_pnl": 1116.8845848083497,
-      "weight_pct": 5.38
+      "atr": 5.698571341378348,
+      "market_value": 53295.0,
+      "unrealised_pnl": 307.48562850952146,
+      "weight_pct": 5.29
     }
   },
   "pending_orders": [
@@ -188,6 +188,146 @@
       "fill_price": 185.5500030517578,
       "quantity": 285,
       "fees": 105.76350173950195
+    },
+    {
+      "id": "2026-10-27:CHENNPETRO:BUY",
+      "symbol": "CHENNPETRO",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Oil Gas & Consumable Fuels",
+      "reference_close": 1573.800048828125,
+      "atr": 95.74285888671875
+    },
+    {
+      "id": "2026-10-27:COFORGE:BUY",
+      "symbol": "COFORGE",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Information Technology",
+      "reference_close": 1997.0,
+      "atr": 70.15715680803571
+    },
+    {
+      "id": "2026-10-27:CRISIL:BUY",
+      "symbol": "CRISIL",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 4694.0,
+      "atr": 170.32861328125
+    },
+    {
+      "id": "2026-10-27:FEDERALBNK:BUY",
+      "symbol": "FEDERALBNK",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 341.6000061035156,
+      "atr": 10.396427699497767
+    },
+    {
+      "id": "2026-10-27:HEXT:BUY",
+      "symbol": "HEXT",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Information Technology",
+      "reference_close": 569.3499755859375,
+      "atr": 24.30345440836826
+    },
+    {
+      "id": "2026-10-27:KARURVYSYA:BUY",
+      "symbol": "KARURVYSYA",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 350.6000061035156,
+      "atr": 16.324999128069198
+    },
+    {
+      "id": "2026-10-27:PNB:BUY",
+      "symbol": "PNB",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 121.2699966430664,
+      "atr": 3.461427961077009
+    },
+    {
+      "id": "2026-10-27:TARIL:BUY",
+      "symbol": "TARIL",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Capital Goods",
+      "reference_close": 314.29998779296875,
+      "atr": 18.321426391601562
+    },
+    {
+      "id": "2026-10-27:UNIONBANK:BUY",
+      "symbol": "UNIONBANK",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 184.60000610351562,
+      "atr": 5.573570251464844
+    },
+    {
+      "id": "2026-10-27:PERSISTENT:BUY",
+      "symbol": "PERSISTENT",
+      "side": "BUY",
+      "signal_date": "2026-10-27",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 94.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Information Technology",
+      "reference_close": 5832.5,
+      "atr": 213.46428571428572
     }
   ],
   "trades": [],
@@ -206,12 +346,20 @@
       "invested": 452840.0,
       "equity": 1005269.7,
       "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-10-27",
+      "cash": 552429.7,
+      "invested": 455548.6,
+      "equity": 1007978.3,
+      "drawdown_pct": 0.0
     }
   ],
   "processed_signal_dates": [
     "2026-10-23",
-    "2026-10-26"
+    "2026-10-26",
+    "2026-10-27"
   ],
   "created_at": "2026-10-25T19:07:20.190465+00:00",
-  "last_updated": "2026-10-26T18:52:54.587850+00:00"
+  "last_updated": "2026-10-27T11:56:17.231468+00:00"
 }
