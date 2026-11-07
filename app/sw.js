@@ -1,5 +1,5 @@
 // Shell: stale-while-revalidate. Data: network-first with offline fallback. Bump VERSION on shell changes.
-const VERSION = 'signal-v1';
+const VERSION = 'signal-v2';
 const SHELL = ['./', 'index.html', 'styles.css',
   'js/main.js', 'js/views.js', 'js/data.js', 'js/charts.js', 'js/util.js', 'js/router.js',
   'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
