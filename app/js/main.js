@@ -115,7 +115,18 @@ function updateTape() {
     : '';
 
   // Build complete list of items: Date & Mode, Benchmark Indices, followed by every stock
-  const stockItems = (s.signals || []).map(stockItem);
+    // Top 10 gainers and top 10 losers of the session
+  const movers = (s.signals || []).filter(r => num(r.change_pct));
+  movers.sort((x, y) => y.change_pct - x.change_pct);
+  const winners = movers.filter(r => r.change_pct > 0).slice(0, 10);
+  const losers  = movers.filter(r => r.change_pct < 0).slice(-10).reverse();
+  const groupLabel = t => `<span class="tape-label tape-group-label">${t}</span>`;
+  const stockItems = [
+    winners.length ? groupLabel('TOP 10 GAINERS') : '',
+    ...winners.map(stockItem),
+    losers.length ? groupLabel('TOP 10 LOSERS') : '',
+    ...losers.map(stockItem),
+  ];
   const coreItems = [
     `<div class="tape-meta">` +
       `<span class="tape-date"><span class="tape-dot"></span>EOD ${esc(dateStr || '—')}</span>` +
