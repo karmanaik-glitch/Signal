@@ -1,13 +1,13 @@
 {
   "status": "PARTIAL",
-  "exchange_date": "2026-11-11",
-  "pipeline_run_id": "43300116534",
+  "exchange_date": "2026-11-12",
+  "pipeline_run_id": "43497442510",
   "expected": 501,
-  "price_histories": 499,
-  "signal_rows": 499,
+  "price_histories": 498,
+  "signal_rows": 498,
   "ruleset_version": "strata-rules-0.4.0",
-  "started_at": "2026-11-12T20:25:30.076885+00:00",
-  "finished_at": "2026-11-12T20:27:38.664626+00:00",
+  "started_at": "2026-11-13T20:00:32.029741+00:00",
+  "finished_at": "2026-11-13T20:03:13.047363+00:00",
   "fundamentals_cache_hits": 501,
   "fundamentals_errors": 0
 }
