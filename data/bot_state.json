@@ -22,12 +22,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 1583.5999755859375,
+      "last_price": 1585.0,
       "peak_price": 1590.0,
-      "atr": 34.492867606026785,
-      "market_value": 112435.59826660156,
-      "unrealised_pnl": 13249.42534033203,
-      "weight_pct": 10.97
+      "atr": 34.092860630580354,
+      "market_value": 112535.0,
+      "unrealised_pnl": 13348.827073730468,
+      "weight_pct": 11.0
     },
     "BHARTIARTL": {
       "symbol": "BHARTIARTL",
@@ -39,12 +39,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Telecommunication",
-      "last_price": 2106.0,
-      "peak_price": 2109.0,
-      "atr": 47.057163783482146,
-      "market_value": 109512.0,
-      "unrealised_pnl": 11243.856,
-      "weight_pct": 10.69
+      "last_price": 2153.5,
+      "peak_price": 2153.5,
+      "atr": 48.72145298549107,
+      "market_value": 111982.0,
+      "unrealised_pnl": 13713.856,
+      "weight_pct": 10.95
     },
     "INFY": {
       "symbol": "INFY",
@@ -56,12 +56,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 1141.5,
+      "last_price": 1145.0999755859375,
       "peak_price": 1185.0,
-      "atr": 36.229484486681876,
-      "market_value": 101593.5,
-      "unrealised_pnl": 2160.03,
-      "weight_pct": 9.92
+      "atr": 33.6595806500308,
+      "market_value": 101913.89782714844,
+      "unrealised_pnl": 2480.4278271484377,
+      "weight_pct": 9.96
     },
     "TCS": {
       "symbol": "TCS",
@@ -73,12 +73,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 2407.5,
+      "last_price": 2405.0,
       "peak_price": 2530.0,
-      "atr": 62.778564453125,
-      "market_value": 93892.5,
-      "unrealised_pnl": -3802.5,
-      "weight_pct": 9.16
+      "atr": 63.05714634486607,
+      "market_value": 93795.0,
+      "unrealised_pnl": -3900.0,
+      "weight_pct": 9.17
     },
     "WIPRO": {
       "symbol": "WIPRO",
@@ -90,12 +90,12 @@
       "entry_signal": "BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Information Technology",
-      "last_price": 194.60000610351562,
+      "last_price": 193.5399932861328,
       "peak_price": 199.0,
-      "atr": 4.774286542619977,
-      "market_value": 55461.00173950195,
-      "unrealised_pnl": 2473.4873680114747,
-      "weight_pct": 5.41
+      "atr": 4.867143903459821,
+      "market_value": 55158.89808654785,
+      "unrealised_pnl": 2171.383715057373,
+      "weight_pct": 5.39
     },
     "CHENNPETRO": {
       "symbol": "CHENNPETRO",
@@ -107,12 +107,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Oil Gas & Consumable Fuels",
-      "last_price": 1428.199951171875,
+      "last_price": 1424.0,
       "peak_price": 1566.9000244140625,
-      "atr": 73.07716304291003,
-      "market_value": 91404.796875,
-      "unrealised_pnl": -8660.535890625,
-      "weight_pct": 8.92
+      "atr": 67.38155111660066,
+      "market_value": 91136.0,
+      "unrealised_pnl": -8929.332765625,
+      "weight_pct": 8.91
     },
     "FEDERALBNK": {
       "symbol": "FEDERALBNK",
@@ -124,12 +124,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 360.95001220703125,
+      "last_price": 362.0,
       "peak_price": 362.5,
-      "atr": 8.149998256138392,
-      "market_value": 57752.001953125,
-      "unrealised_pnl": 2714.14791015625,
-      "weight_pct": 5.64
+      "atr": 8.314285278320312,
+      "market_value": 57920.0,
+      "unrealised_pnl": 2882.14595703125,
+      "weight_pct": 5.66
     },
     "TARIL": {
       "symbol": "TARIL",
@@ -141,12 +141,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Capital Goods",
-      "last_price": 314.79998779296875,
+      "last_price": 308.75,
       "peak_price": 317.54998779296875,
-      "atr": 12.625,
-      "market_value": 99791.5961303711,
-      "unrealised_pnl": 54.52013037109376,
-      "weight_pct": 9.74
+      "atr": 12.607142857142858,
+      "market_value": 97873.75,
+      "unrealised_pnl": -1863.326,
+      "weight_pct": 9.57
     },
     "INDIANB": {
       "symbol": "INDIANB",
@@ -158,11 +158,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 932.8499755859375,
+      "last_price": 932.9500122070312,
       "peak_price": 945.9000244140625,
-      "atr": 22.642870221819198,
-      "market_value": 1865.699951171875,
-      "unrealised_pnl": 124.32412670898438,
+      "atr": 22.860722133091517,
+      "market_value": 1865.9000244140625,
+      "unrealised_pnl": 124.52419995117188,
       "weight_pct": 0.18
     },
     "ADANIPORTS": {
@@ -175,12 +175,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Services",
-      "last_price": 1903.300048828125,
+      "last_price": 1893.0,
       "peak_price": 1942.699951171875,
-      "atr": 54.7357177734375,
-      "market_value": 100874.90258789062,
-      "unrealised_pnl": 1460.470587890625,
-      "weight_pct": 9.85
+      "atr": 53.05714634486607,
+      "market_value": 100329.0,
+      "unrealised_pnl": 914.568,
+      "weight_pct": 9.81
     },
     "FSL": {
       "symbol": "FSL",
@@ -192,12 +192,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Services",
-      "last_price": 291.25,
+      "last_price": 287.3500061035156,
       "peak_price": 298.20001220703125,
-      "atr": 12.589283534458705,
-      "market_value": 95821.25,
-      "unrealised_pnl": -1757.518,
-      "weight_pct": 9.35
+      "atr": 12.199996948242188,
+      "market_value": 94538.15200805664,
+      "unrealised_pnl": -3040.6159919433594,
+      "weight_pct": 9.24
     },
     "GAIL": {
       "symbol": "GAIL",
@@ -209,11 +209,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Oil Gas & Consumable Fuels",
-      "last_price": 188.0,
+      "last_price": 187.0,
       "peak_price": 189.89999389648438,
-      "atr": 4.56928471156529,
-      "market_value": 188.0,
-      "unrealised_pnl": 10.615941223144532,
+      "atr": 4.327855791364398,
+      "market_value": 187.0,
+      "unrealised_pnl": 9.615941223144532,
       "weight_pct": 0.02
     },
     "ANGELONE": {
@@ -226,12 +226,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 349.0,
+      "last_price": 348.1499938964844,
       "peak_price": 349.0,
-      "atr": 11.603567940848214,
-      "market_value": 103653.0,
-      "unrealised_pnl": 11279.824216369629,
-      "weight_pct": 10.12
+      "atr": 11.467851911272321,
+      "market_value": 103400.54818725586,
+      "unrealised_pnl": 11027.372403625488,
+      "weight_pct": 10.11
     },
     "ADANIPOWER": {
       "symbol": "ADANIPOWER",
@@ -243,11 +243,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Power",
-      "last_price": 205.6699981689453,
+      "last_price": 205.2899932861328,
       "peak_price": 208.0,
-      "atr": 5.269997732979911,
-      "market_value": 205.6699981689453,
-      "unrealised_pnl": 0.2599981689453125,
+      "atr": 4.912139892578125,
+      "market_value": 205.2899932861328,
+      "unrealised_pnl": -0.12000671386718748,
       "weight_pct": 0.02
     }
   },
@@ -926,14 +926,29 @@
       "symbol": "360ONE",
       "side": "BUY",
       "signal_date": "2026-11-13",
-      "status": "pending_next_open",
+      "status": "rejected_insufficient_cash",
       "signal": "STRONG BUY",
       "signal_score": 100.0,
       "ruleset_version": "strata-rules-0.4.0",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
       "reference_close": 1176.800048828125,
-      "atr": 37.58213588169643
+      "atr": 37.58213588169643,
+      "resolved_date": "2026-11-16"
+    },
+    {
+      "id": "2026-11-16:360ONE:BUY",
+      "symbol": "360ONE",
+      "side": "BUY",
+      "signal_date": "2026-11-16",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 1179.0,
+      "atr": 37.149989536830354
     }
   ],
   "trades": [
@@ -1071,6 +1086,13 @@
       "invested": 1024451.52,
       "equity": 1024538.94,
       "drawdown_pct": -0.509
+    },
+    {
+      "date": "2026-11-16",
+      "cash": 87.42,
+      "invested": 1022840.44,
+      "equity": 1022927.86,
+      "drawdown_pct": -0.665
     }
   ],
   "processed_signal_dates": [
@@ -1086,8 +1108,9 @@
     "2026-11-09",
     "2026-11-11",
     "2026-11-12",
-    "2026-11-13"
+    "2026-11-13",
+    "2026-11-16"
   ],
   "created_at": "2026-10-25T19:07:20.190465+00:00",
-  "last_updated": "2026-11-16T22:31:42.812500+00:00"
+  "last_updated": "2026-11-17T21:22:21.981090+00:00"
 }
