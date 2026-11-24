@@ -10,7 +10,7 @@
     "atr_stop_mult": 3.0,
     "cooldown_days": 14
   },
-  "cash": 143106.5248597109,
+  "cash": 41976.67081674213,
   "positions": {
     "ICICIBANK": {
       "symbol": "ICICIBANK",
@@ -22,12 +22,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 1640.0,
+      "last_price": 1585.5,
       "peak_price": 1640.0,
-      "atr": 36.05714634486607,
-      "market_value": 116440.0,
-      "unrealised_pnl": 17253.82707373047,
-      "weight_pct": 11.5
+      "atr": 38.378574916294646,
+      "market_value": 112570.5,
+      "unrealised_pnl": 13384.327073730468,
+      "weight_pct": 11.32
     },
     "BHARTIARTL": {
       "symbol": "BHARTIARTL",
@@ -39,12 +39,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Telecommunication",
-      "last_price": 2161.699951171875,
+      "last_price": 2128.5,
       "peak_price": 2161.699951171875,
-      "atr": 44.621433803013396,
-      "market_value": 112408.3974609375,
-      "unrealised_pnl": 14140.2534609375,
-      "weight_pct": 11.1
+      "atr": 46.135707310267854,
+      "market_value": 110682.0,
+      "unrealised_pnl": 12413.856,
+      "weight_pct": 11.13
     },
     "FEDERALBNK": {
       "symbol": "FEDERALBNK",
@@ -56,12 +56,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 373.5,
+      "last_price": 359.79998779296875,
       "peak_price": 373.5,
-      "atr": 8.839287894112724,
-      "market_value": 59760.0,
-      "unrealised_pnl": 4722.14595703125,
-      "weight_pct": 5.9
+      "atr": 9.371431623186384,
+      "market_value": 57567.998046875,
+      "unrealised_pnl": 2530.14400390625,
+      "weight_pct": 5.79
     },
     "TARIL": {
       "symbol": "TARIL",
@@ -73,12 +73,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Capital Goods",
-      "last_price": 297.1000061035156,
+      "last_price": 289.45001220703125,
       "peak_price": 317.54998779296875,
-      "atr": 10.357145036969866,
-      "market_value": 94180.70193481445,
-      "unrealised_pnl": -5556.374065185547,
-      "weight_pct": 9.3
+      "atr": 10.153573172433036,
+      "market_value": 91755.6538696289,
+      "unrealised_pnl": -7981.422130371094,
+      "weight_pct": 9.23
     },
     "INDIANB": {
       "symbol": "INDIANB",
@@ -90,11 +90,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 950.0,
+      "last_price": 933.0,
       "peak_price": 950.0,
-      "atr": 23.907148088727677,
-      "market_value": 1900.0,
-      "unrealised_pnl": 158.62417553710938,
+      "atr": 24.807146344866073,
+      "market_value": 1866.0,
+      "unrealised_pnl": 124.62417553710938,
       "weight_pct": 0.19
     },
     "ADANIPORTS": {
@@ -107,12 +107,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Services",
-      "last_price": 1917.0,
+      "last_price": 1919.0,
       "peak_price": 1942.699951171875,
-      "atr": 43.907139369419646,
-      "market_value": 101601.0,
-      "unrealised_pnl": 2186.568,
-      "weight_pct": 10.03
+      "atr": 44.214285714285715,
+      "market_value": 101707.0,
+      "unrealised_pnl": 2292.568,
+      "weight_pct": 10.23
     },
     "FSL": {
       "symbol": "FSL",
@@ -124,12 +124,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Services",
-      "last_price": 281.45001220703125,
+      "last_price": 283.6000061035156,
       "peak_price": 298.20001220703125,
-      "atr": 10.610711233956474,
-      "market_value": 92597.05401611328,
-      "unrealised_pnl": -4981.713983886719,
-      "weight_pct": 9.14
+      "atr": 10.057139805385045,
+      "market_value": 93304.40200805664,
+      "unrealised_pnl": -4274.365991943359,
+      "weight_pct": 9.38
     },
     "GAIL": {
       "symbol": "GAIL",
@@ -141,11 +141,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Oil Gas & Consumable Fuels",
-      "last_price": 191.44000244140625,
+      "last_price": 185.60000610351562,
       "peak_price": 192.10000610351562,
-      "atr": 4.1014284406389505,
-      "market_value": 191.44000244140625,
-      "unrealised_pnl": 14.055943664550782,
+      "atr": 3.8628572736467635,
+      "market_value": 185.60000610351562,
+      "unrealised_pnl": 8.215947326660157,
       "weight_pct": 0.02
     },
     "ANGELONE": {
@@ -158,12 +158,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
-      "last_price": 348.29998779296875,
+      "last_price": 337.0,
       "peak_price": 349.79998779296875,
-      "atr": 15.667851039341517,
-      "market_value": 103445.09637451172,
-      "unrealised_pnl": 11071.920590881347,
-      "weight_pct": 10.22
+      "atr": 16.23927961077009,
+      "market_value": 100089.0,
+      "unrealised_pnl": 7715.824216369629,
+      "weight_pct": 10.06
     },
     "ADANIPOWER": {
       "symbol": "ADANIPOWER",
@@ -175,11 +175,11 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Power",
-      "last_price": 211.9499969482422,
+      "last_price": 207.89999389648438,
       "peak_price": 211.9499969482422,
-      "atr": 4.763570513044085,
-      "market_value": 211.9499969482422,
-      "unrealised_pnl": 6.539996948242187,
+      "atr": 4.919285365513393,
+      "market_value": 207.89999389648438,
+      "unrealised_pnl": 2.489993896484375,
       "weight_pct": 0.02
     },
     "BALKRISIND": {
@@ -192,12 +192,12 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Automobile and Auto Components",
-      "last_price": 2363.800048828125,
+      "last_price": 2345.300048828125,
       "peak_price": 2363.800048828125,
-      "atr": 76.91747387394386,
-      "market_value": 89824.40185546875,
-      "unrealised_pnl": 1145.39785546875,
-      "weight_pct": 8.87
+      "atr": 75.83958963226463,
+      "market_value": 89121.40185546875,
+      "unrealised_pnl": 442.39785546875,
+      "weight_pct": 8.96
     },
     "BAJAJ-AUTO": {
       "symbol": "BAJAJ-AUTO",
@@ -209,105 +209,32 @@
       "entry_signal": "STRONG BUY",
       "market_segment": "CASH_EQUITY",
       "industry": "Automobile and Auto Components",
-      "last_price": 10765.0,
+      "last_price": 10643.0,
       "peak_price": 10772.0,
-      "atr": 227.64285714285714,
-      "market_value": 96885.0,
-      "unrealised_pnl": -256.89599999999996,
-      "weight_pct": 9.57
+      "atr": 219.71428571428572,
+      "market_value": 95787.0,
+      "unrealised_pnl": -1354.896,
+      "weight_pct": 9.63
+    },
+    "BPCL": {
+      "symbol": "BPCL",
+      "quantity": 320,
+      "entry_price": 315.3999938964844,
+      "entry_date": "2026-11-23",
+      "entry_fee": 201.85599609375,
+      "entry_signal_date": "2026-11-20",
+      "entry_signal": "STRONG BUY",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Oil Gas & Consumable Fuels",
+      "last_price": 305.3500061035156,
+      "peak_price": 315.3999938964844,
+      "atr": 8.389284406389509,
+      "market_value": 97712.001953125,
+      "unrealised_pnl": -3417.85208984375,
+      "weight_pct": 9.82
     }
   },
   "pending_orders": [
-    {
-      "id": "2026-10-23:ICICIBANK:BUY",
-      "symbol": "ICICIBANK",
-      "side": "BUY",
-      "signal_date": "2026-10-23",
-      "status": "filled",
-      "signal": "STRONG BUY",
-      "signal_score": 100.0,
-      "ruleset_version": "strata-rules-0.4.0",
-      "market_segment": "CASH_EQUITY",
-      "industry": "Financial Services",
-      "reference_close": 1394.199951171875,
-      "atr": 27.107142857142858,
-      "fill_date": "2026-10-26",
-      "fill_price": 1394.199951171875,
-      "quantity": 71,
-      "fees": 197.97639306640625
-    },
-    {
-      "id": "2026-10-23:BHARTIARTL:BUY",
-      "symbol": "BHARTIARTL",
-      "side": "BUY",
-      "signal_date": "2026-10-23",
-      "status": "filled",
-      "signal": "STRONG BUY",
-      "signal_score": 90.0,
-      "ruleset_version": "strata-rules-0.4.0",
-      "market_segment": "CASH_EQUITY",
-      "industry": "Telecommunication",
-      "reference_close": 1892.0999755859375,
-      "atr": 48.26429966517857,
-      "fill_date": "2026-10-26",
-      "fill_price": 1886.0,
-      "quantity": 52,
-      "fees": 196.144
-    },
-    {
-      "id": "2026-10-23:INFY:BUY",
-      "symbol": "INFY",
-      "side": "BUY",
-      "signal_date": "2026-10-23",
-      "status": "filled",
-      "signal": "STRONG BUY",
-      "signal_score": 88.0,
-      "ruleset_version": "strata-rules-0.4.0",
-      "market_segment": "CASH_EQUITY",
-      "industry": "Information Technology",
-      "reference_close": 1153.800048828125,
-      "atr": 43.10357666015625,
-      "fill_date": "2026-10-26",
-      "fill_price": 1115.0,
-      "quantity": 89,
-      "fees": 198.47
-    },
-    {
-      "id": "2026-10-23:TCS:BUY",
-      "symbol": "TCS",
-      "side": "BUY",
-      "signal_date": "2026-10-23",
-      "status": "filled",
-      "signal": "STRONG BUY",
-      "signal_score": 88.0,
-      "ruleset_version": "strata-rules-0.4.0",
-      "market_segment": "CASH_EQUITY",
-      "industry": "Information Technology",
-      "reference_close": 2530.0,
-      "atr": 83.42884986560755,
-      "fill_date": "2026-10-26",
-      "fill_price": 2500.0,
-      "quantity": 39,
-      "fees": 195.0
-    },
-    {
-      "id": "2026-10-23:WIPRO:BUY",
-      "symbol": "WIPRO",
-      "side": "BUY",
-      "signal_date": "2026-10-23",
-      "status": "filled",
-      "signal": "BUY",
-      "signal_score": 76.0,
-      "ruleset_version": "strata-rules-0.4.0",
-      "market_segment": "CASH_EQUITY",
-      "industry": "Information Technology",
-      "reference_close": 189.83999633789062,
-      "atr": 5.582858494349888,
-      "fill_date": "2026-10-26",
-      "fill_price": 185.5500030517578,
-      "quantity": 285,
-      "fees": 105.76350173950195
-    },
     {
       "id": "2026-10-27:CHENNPETRO:BUY",
       "symbol": "CHENNPETRO",
@@ -1105,42 +1032,104 @@
       "symbol": "BAJAJFINSV",
       "side": "BUY",
       "signal_date": "2026-11-20",
-      "status": "pending_next_open",
+      "status": "rejected_insufficient_cash",
       "signal": "STRONG BUY",
       "signal_score": 100.0,
       "ruleset_version": "strata-rules-0.4.0",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
       "reference_close": 1892.0,
-      "atr": 49.13572474888393
+      "atr": 49.13572474888393,
+      "resolved_date": "2026-11-23"
     },
     {
       "id": "2026-11-20:BAJFINANCE:BUY",
       "symbol": "BAJFINANCE",
       "side": "BUY",
       "signal_date": "2026-11-20",
-      "status": "pending_next_open",
+      "status": "rejected_insufficient_cash",
       "signal": "STRONG BUY",
       "signal_score": 100.0,
       "ruleset_version": "strata-rules-0.4.0",
       "market_segment": "CASH_EQUITY",
       "industry": "Financial Services",
       "reference_close": 1122.0,
-      "atr": 32.74644252232143
+      "atr": 32.74644252232143,
+      "resolved_date": "2026-11-23"
     },
     {
       "id": "2026-11-20:BPCL:BUY",
       "symbol": "BPCL",
       "side": "BUY",
       "signal_date": "2026-11-20",
-      "status": "pending_next_open",
+      "status": "filled",
       "signal": "STRONG BUY",
       "signal_score": 100.0,
       "ruleset_version": "strata-rules-0.4.0",
       "market_segment": "CASH_EQUITY",
       "industry": "Oil Gas & Consumable Fuels",
       "reference_close": 314.1000061035156,
-      "atr": 8.228570120675224
+      "atr": 8.228570120675224,
+      "fill_date": "2026-11-23",
+      "fill_price": 315.3999938964844,
+      "quantity": 320,
+      "fees": 201.85599609375
+    },
+    {
+      "id": "2026-11-23:TARIL:SELL",
+      "symbol": "TARIL",
+      "side": "SELL",
+      "signal_date": "2026-11-23",
+      "status": "pending_next_open",
+      "signal": "SELL",
+      "signal_score": 40.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Capital Goods",
+      "reference_close": 289.45001220703125,
+      "atr": 10.153573172433036
+    },
+    {
+      "id": "2026-11-23:360ONE:BUY",
+      "symbol": "360ONE",
+      "side": "BUY",
+      "signal_date": "2026-11-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 1201.1500244140625,
+      "atr": 37.792837960379465
+    },
+    {
+      "id": "2026-11-23:ACE:BUY",
+      "symbol": "ACE",
+      "side": "BUY",
+      "signal_date": "2026-11-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Capital Goods",
+      "reference_close": 1187.449951171875,
+      "atr": 43.739292689732146
+    },
+    {
+      "id": "2026-11-23:AXISBANK:BUY",
+      "symbol": "AXISBANK",
+      "side": "BUY",
+      "signal_date": "2026-11-23",
+      "status": "pending_next_open",
+      "signal": "STRONG BUY",
+      "signal_score": 100.0,
+      "ruleset_version": "strata-rules-0.4.0",
+      "market_segment": "CASH_EQUITY",
+      "industry": "Financial Services",
+      "reference_close": 1388.5999755859375,
+      "atr": 37.14286586216518
     }
   ],
   "trades": [
@@ -1393,6 +1382,13 @@
       "invested": 869445.04,
       "equity": 1012551.57,
       "drawdown_pct": -1.673
+    },
+    {
+      "date": "2026-11-23",
+      "cash": 41976.67,
+      "invested": 952556.46,
+      "equity": 994533.13,
+      "drawdown_pct": -3.423
     }
   ],
   "processed_signal_dates": [
@@ -1413,8 +1409,9 @@
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-23"
   ],
   "created_at": "2026-10-25T19:07:20.190465+00:00",
-  "last_updated": "2026-11-24T00:22:02.692870+00:00"
+  "last_updated": "2026-11-24T22:47:48.909960+00:00"
 }
